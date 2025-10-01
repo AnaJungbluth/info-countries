@@ -11,30 +11,27 @@
 </script>
 
 <template>
-  <header>
-    <h1>World</h1>
+  <header class="header">
+    <img src="./assets/image/world.png" class="img-world">
+    <h1>WORLD</h1>
   </header>
 
   <main class="container">
     <div class="description">
-      <div>
         <h2>Country information</h2>
-      </div>
-      <div>
         <!-- Texto informativo sobre a aplicação -->
         <p>
-          Digite o nome de um país na caixa de pesquisa e descubra sua localização 
-          no mapa, população, bandeira, moeda, idiomas e outras informações.
+          Enter the name of a country in the search box and discover its location on 
+          the map, population, flag, currency, languages, and other information.
         </p>
-      </div>
     </div>
 
     <div class="search">
       <!-- Caixa de pesquisa -->
-       <input type="text" v-model="nameCountry" placeholder="Digite o nome do país">
+       <input type="text" v-model="nameCountry" placeholder="Enter the name of the country">
       <!-- Botão de pesquisar -->
-       <button @click="getCountry">
-        <img src="./assets/image/lupa.png" alt="Pesquisar">
+       <button @click="getCountry" title="Search">
+        <img src="./assets/image/lupa.png" alt="Pesquisar" class="img-search">
        </button>
     </div>
 
