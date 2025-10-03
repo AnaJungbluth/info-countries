@@ -3,10 +3,19 @@
     import axios from 'axios'
     import L from 'leaflet'
 
+    import iconUrl from "../assets/icons/marker-icon.png";
+    import iconRetinaUrl from "../assets/icons/marker-icon-2x.png";
+    import shadowUrl from "../assets/icons/marker-shadow.png";
+
+    L.Icon.Default.mergeOptions({
+        iconRetinaUrl,
+        iconUrl,
+        shadowUrl,
+    });
+
     const props = defineProps({
         name: String
     })
-    props.name.toLowerCase()
 
     const dataCountry = ref(null)
     const errorMessage = ref(null)
@@ -21,6 +30,7 @@
 
         try {
             const res = await axios.get(`http://localhost:3000/country/${newName}`)
+
             if (!res.data || res.data.length === 0) {
                 throw new Error('País não encontrado')
             }

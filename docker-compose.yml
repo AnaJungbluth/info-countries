@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  api:
+    build: ./controller
+    container_name: country-api
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./controller:/app
+    restart: always
+
+  frontend:
+    build: ./info-countries
+    container_name: country-frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - api
+    restart: always
