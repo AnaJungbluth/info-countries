@@ -33,6 +33,22 @@ Aplicação que permite buscar informações sobre países: localização no map
 docker-compose up --build
 ```
 
+### Aplicação completa sem Docker
+
+#### Back-end
+
+```bash
+cd controller
+node api.js
+```
+
+#### Front-end
+
+```bash
+cd info-countries
+npm run dev
+```
+
 ## Acessar  🚀
 
 - [Front-end](http://localhost:5173)
