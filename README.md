@@ -30,7 +30,7 @@ Aplicação que permite buscar informações sobre países: localização no map
 ### Aplicação completa com o Docker
 
 ```bash
-cd Info_Countries
+cd info-country
 docker-compose up --build
 ```
 
